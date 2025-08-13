@@ -4,15 +4,35 @@
 ##########
 
 ##########
+# OHD + CollectionBuilder Theme Customization
+# values set here help configure details of individual pages in the website
+##########
+
+##########
+# Base Layout (OHD or CollectionBuilder)
+# If you'd like the site to look like CollectionBuilder instead of the OHD look, just change the below value for base-layout to CB rather than ohd
+base-layout: CB # OHD or CB
+
+##########
+# HOME PAGE
+# The optional visualization on the home page is a composite of the transcripts color-coded representation 
+# To turn it off, either don't include a filters or change the value below to false.
+home-page-visualization: true # true / false, if true, the visualization will appear on the home page
+# if false or there's no _data/filters.csv, the image defined by featured-image will be used as a featured image on the homepage
+
+
+
+##########
 # HOME PAGE
 #
 # featured image is used in home page banner and in meta markup to represent the collection
 # use either an objectid (from an item in this collect), a relative location of an image in this repo, or a full url to an image elsewhere
-featured-image: assets/img/d8_hero_burling_exterior_brighter_0.png
+# Note: if you are using the CB base layout as determined above, the featured image defined here will show up as the large image at top of the home page
+featured-image: /assets/img/physics-museum-banner-image.png
 # optional: add extra padding around collection title for a larger image feature. 
-home-title-y-padding: 10em # the margin from the top your title portion will appear.
+home-title-y-padding: 1em # the margin from the top your title portion will appear.
 # optional: change position of background image, center, top, bottom
-home-banner-image-position: center # Default is top
+home-banner-image-position: bottom # Default is top
 
 
 ##########
