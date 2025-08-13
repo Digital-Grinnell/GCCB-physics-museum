@@ -9,6 +9,17 @@
 {% endcomment %}
 <div class="row row-cols-2 row-cols-lg-4 g-2">
     {% for child in children %}
+    {% if forloop.index  == 5%}
+    </div>
+    <div class="mt-3 text-center col-12">
+        <button class="btn btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#additionalItems" aria-expanded="false" aria-controls="additionalItems">
+            Show Additional Items ({{ children.size | minus: 4 }})
+        </button>
+    </div>
+    
+    <div class="collapse mt-3" id="additionalItems">
+        <div class="row row-cols-2 row-cols-lg-4 g-2">
+        {% endif %}
     <div class="col">
         <div class="card h-100">
             <div class="my-auto">
@@ -22,7 +33,7 @@
                         {% else %}
                         <svg class="bi text-body compound-thumb" fill="currentColor" aria-hidden="true">
                             {%- assign icon_template = child.display_template | default: item.format -%}
-                            <use xlink:href="{{ '/assets/lib/cb-icons.svg' | relative_url }}#{% if icon_template contains 'image' %}icon-image{% elsif icon_template contains 'pdf' %}icon-pdf{% elsif icon_template contains 'audio' %}icon-audio{% elsif icon_template contains 'video' %}icon-video{% elsif icon_template contains 'markdown' %}icon-markdown{% else %}icon-default{% endif %}" />
+                            <use xlink:href="{{ '/assets/lib/cb-icons.svg' | relative_url }}#{% if icon_template contains 'image' %}icon-image{% elsif icon_template contains 'pdf' %}icon-pdf{% elsif icon_template contains 'audio' %}icon-audio{% elsif icon_template contains 'video' %}icon-video{% else %}icon-default{% endif %}" />
                         </svg>
                         <span class="visually-hidden">{{ child.title | escape }} - {{ child.format }}</span>
                         {% endif %}
@@ -137,6 +148,7 @@
         </div>
     </div>
     {% endfor %}
+</div>
 </div>
 
 <script>

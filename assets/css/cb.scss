@@ -20,9 +20,7 @@ $theme-link-color: {{ site.data.theme.link-color | default: '""' }};
 );
 
 /* individual CB page styles */
-@forward "pages" with (
-  $toc-a-color: {{ site.data.theme.text-color | default: '#191919' }}
-); 
+@use "pages"; 
 
 /* theme colors pulled from config-theme-colors */
 {% assign btns = site.data.config-theme-colors | where_exp: "item","item.color != nil" %}
@@ -39,5 +37,11 @@ $theme-link-color: {{ site.data.theme.link-color | default: '""' }};
 );
 {% endif %}
 
+<<<<<<< HEAD
+=======
+/* pull in Oral History as Data styles to override everything but Custom style changes */
+@use "ohd";
+
+>>>>>>> upstream/main
 /* pull in custom styles to override everything else */
 @use "custom";
