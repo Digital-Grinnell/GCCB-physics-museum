@@ -17,7 +17,7 @@ base-layout: CB # OHD or CB
 # HOME PAGE
 # The optional visualization on the home page is a composite of the transcripts color-coded representation 
 # To turn it off, either don't include a filters or change the value below to false.
-home-page-visualization: true # true / false, if true, the visualization will appear on the home page
+home-page-visualization: false # true / false, if true, the visualization will appear on the home page
 # if false or there's no _data/filters.csv, the image defined by featured-image will be used as a featured image on the homepage
 
 
