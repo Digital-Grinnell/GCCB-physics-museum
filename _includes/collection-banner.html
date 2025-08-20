@@ -1,7 +1,12 @@
+<!-- cb: GCCB-physics-museum/_includes/collection-banner.html
+  page.layout: {{ page.layout | json }}<br/>
+  site.data.theme.featured-image: {{ site.data.theme.featured-image | json }}<br/>
+  site.data.theme.featured-item.src: {{ site.data.theme.featured-item.src | json }}<br/> -->
+
 {% if page.layout == "home-infographic" and site.data.theme.featured-image %}
 <style>
 #home-banner {
-    background-image: url('{{ site.data.theme.featured_item.src | relative_url }}');
+    background-image: url('{{ site.data.theme.featured-image | relative_url }}');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: {{ site.data.theme.home-banner-image-position | default: 'center' }};
@@ -50,3 +55,4 @@
     </div>
 </div>
 {%- endif -%}
+<!-- /cb: GCCB-physics-museum/_includes/collection-banner.html -->
