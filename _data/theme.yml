@@ -28,11 +28,12 @@ home-page-visualization: false # true / false, if true, the visualization will a
 # featured image is used in home page banner and in meta markup to represent the collection
 # use either an objectid (from an item in this collect), a relative location of an image in this repo, or a full url to an image elsewhere
 # Note: if you are using the CB base layout as determined above, the featured image defined here will show up as the large image at top of the home page
-featured-image: /assets/img/physics-museum-banner-image.png
+featured-image: https://collectionbuilder.blob.core.windows.net/objs/physics_museum/physics-museum-banner-image-no-text.png
+
 # optional: add extra padding around collection title for a larger image feature. 
-home-title-y-padding: 1em # the margin from the top your title portion will appear.
+home-title-y-padding: 5 em # the margin from the top your title portion will appear.
 # optional: change position of background image, center, top, bottom
-home-banner-image-position: bottom # Default is top
+home-banner-image-position: top # Default is top
 
 
 ##########
