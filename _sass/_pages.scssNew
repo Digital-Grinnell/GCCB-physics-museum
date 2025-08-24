@@ -140,6 +140,16 @@ $toc-a-color: #191919 !default;
 }
 /* subjects */
 .tagcloud0{font-size:1.1em;}
+.tagcloud1{font-size:1.1em;}
+.tagcloud2{font-size:1.1em;}
+.tagcloud3{font-size:1.1em;}
+.tagcloud4{font-size:1.1em;}
+.tagcloud5{font-size:1.1em;}
+.tagcloud6{font-size:1.1em;}
+.tagcloud7{font-size:1.1em;}
+.tagcloud8{font-size:1.1em;}
+.tagcloud9{font-size:1.1em;}
+.tagcloud10{font-size:1.1em;}
 
 /* About */
 /* side nav toc */ 

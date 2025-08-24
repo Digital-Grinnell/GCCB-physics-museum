@@ -1,0 +1,75 @@
+Aug. 20, 2025
+
+repo edits: adding collection cloud page and dropdown on home page
+
+pages
+    collections.md (added)
+        ---
+        title: Collections
+        layout: cloud
+        permalink: /collections.html
+        # Default collections page is configured in "_data/theme.yml"
+        # leave cloud-fields as "site.data.theme.locations-fields"
+        cloud-fields: site.data.theme.collections-fields
+        ---
+
+            compare cloud-fields entries
+        subjects.md:
+            cloud-fields: site.data.theme.subjects-fields
+        locations.md
+            cloud-fields: site.data.theme.locations-fields
+        people.md
+            cloud-fields: people
+        collections.md
+            cloud-fields: site.data.theme.collections-fields
+
+_data:
+    config-metadata.csv
+        field,display_name,browse_link,external_link,dc_map,schema_map
+        collection,Collections,,,,contentLocation
+        subject,Subjects,true,,DCTERMS.subject,keywords
+        collection,Collections,true,,DCTERMS.subject,keywords
+        collection,Collections,,
+        subject,Subjects,,,,
+        people,People,true,,DCTERMS.keywords,person,    
+        location,Location,,,,contentLocation
+
+    theme.yml
+        ##########
+        # SUBJECTS PAGE
+        #
+        subjects-fields: subject # set of fields separated by ; to be featured in the cloud (leave blank or comment out to not generate)
+        subjects-min: 1 # min size for subject cloud, too many terms = slow load time!
+        subjects-stopwords: # set of subjects separated by ; that will be removed from display, e.g. boxers;boxing
+
+        ##########
+        # LOCATIONS PAGE
+        #
+        locations-fields: location # set of fields separated by ; to be featured in the cloud (leave blank or comment out to not generate)
+        locations-min: 1 # min size for subject cloud, too many terms = slow load time!
+        locations-stopwords: # set of subjects separated by ; that will be removed from display, e.g. boxers;boxing
+
+        ##########
+        # COLLECTIONS PAGE
+        #
+        collections-fields: collection # set of fields separated by ; to be featured in the cloud (leave blank or comment out to not generate)
+        collections-min: 1 # min size for subject cloud, too many terms = slow load time!
+        collections-stopwords: # set of subjects separated by ; that will be removed from display, e.g. boxers;boxing
+
+    config-nav.csv
+        display_name,stub,dropdown_parent
+        Select,,
+        Collections,/collections.html,Select
+        Subjects,/subjects.html,Select
+        Locations,/locations.html,Select
+        Timeline,/timeline.html,Select
+
+
+Jekyll to local site, Select->Collections: shows following text
+    Browse Collections
+    Use this word cloud visualization to browse Collections. 
+    Word size is determined by frequency and all words link 
+    to a corresponding collection search.
+
+need to add creator dropdown cloud in Select
+    in progress
